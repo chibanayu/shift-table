@@ -11,13 +11,7 @@ function buttonClick() {
   let newMember3b = random(member2, 3);
   let newMember4 = random(member2, 6);
   let newMember5 = random(member2, 6);
-
-  console.log(newMember1);
-  console.log(newMember2);
-  console.log(newMember3a, newMember3b);
-  console.log(newMember4);
-  console.log(newMember5);
-  //ブラウザに表示させる
+  //ブランチに表示させる
   let td = document.getElementById("list");
   td.insertAdjacentHTML(
     "beforeend",

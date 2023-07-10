@@ -1,4 +1,4 @@
-function buttonClick() {
+function create() {
   //配列を用意する
   let member1 = ["佐藤", "伊藤", "遠藤", "鈴木", "田中", "小林", "千葉", "加藤", "相澤", "中村", "高橋", "渡辺", "山本", "吉田", "石田"];
   //member1からランダムで6人ずつ出しを変数に格納
@@ -8,7 +8,6 @@ function buttonClick() {
   let newMember3a = random(member1, 3);
   let plusMember1 = newMember1.concat(newMember2);
   let plusMember2 = plusMember1.concat(newMember3a);
-  console.log(plusMember2);
   //member1(15人)とnewMember3a(3人)を比較して差分を出す
   newMember6 = plusMember2.filter(i => newMember3a.indexOf(i) == -1)
   let newMember3b = random(newMember6, 3);
@@ -40,7 +39,12 @@ function buttonClick() {
   }
 }
 
-//４回繰り返し
-for (let i = 0; i * 4; i++){
-  console.log("i = " + i);
+function buttonClick() {
+  for (let i = 0; i < create(); i++) {
+  }
+  for (let i = 0; i < create(); i++) {
+  }
+  for (let i = 0; i < create(); i++) {
+  }
+  create();
 }

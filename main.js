@@ -1,17 +1,19 @@
 function buttonClick() {
   //配列を用意する
   let member1 = ["佐藤", "伊藤", "遠藤", "鈴木", "田中", "小林", "千葉", "加藤", "相澤", "中村", "高橋", "渡辺", "山本", "吉田", "石田"];
-  let member2 = ["佐藤", "伊藤", "遠藤", "鈴木", "田中", "小林", "千葉", "加藤", "相澤", "中村", "高橋", "渡辺", "山本", "吉田", "石田"];
   //member1からランダムで6人ずつ出しを変数に格納
   let newMember1 = random(member1, 6);
   let newMember2 = random(member1, 6);
   //member1から残りの3人を出す
   let newMember3a = random(member1, 3);
-  //member2(15人)とnewMember3a(3人)を比較して差分を出す
-  newMember6 = member2.filter(i => newMember3a.indexOf(i) == -1)
+  let plusMember1 = newMember1.concat(newMember2);
+  let plusMember2 = plusMember1.concat(newMember3a);
+  console.log(plusMember2);
+  //member1(15人)とnewMember3a(3人)を比較して差分を出す
+  newMember6 = plusMember2.filter(i => newMember3a.indexOf(i) == -1)
   let newMember3b = random(newMember6, 3);
-  //member2(15人)とnewMember3b(3人)を比較して差分を出す
-  newMember7 = member2.filter(i => newMember3b.indexOf(i) == -1)
+  //member1(15人)とnewMember3b(3人)を比較して差分を出す
+  newMember7 = plusMember2.filter(i => newMember3b.indexOf(i) == -1)
   //差分からランダムで6人ずつ出し変数に格納
   let newMember4 = random(newMember7, 6);
   let newMember5 = random(newMember7, 6);

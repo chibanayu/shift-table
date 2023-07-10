@@ -6,23 +6,23 @@ function buttonClick() {
   let newMember1 = random(member1, 6);
   let newMember2 = random(member1, 6);
   //member1から残りの3人を出す
-  let newMember3A = random(member1, 3);
+  let newMember3a = random(member1, 3);
   //member2から3人出す
-  let newMember3B = random(member2, 3);
+  let newMember3b = random(member2, 3);
   let newMember4 = random(member2, 6);
   let newMember5 = random(member2, 6);
-  //コンソールログで確かめる
+
   console.log(newMember1);
   console.log(newMember2);
-  console.log(newMember3A, newMember3B);
+  console.log(newMember3a, newMember3b);
   console.log(newMember4);
   console.log(newMember5);
-//ブラウザに表示させる
-    let td = document.getElementById("list");
-      td.insertAdjacentHTML(
-        "beforeend",
-        `<tr class="member"><td>${newMember1}</td><td>${newMember2}</td><td>${newMember3A}${newMember3B}</td><td>${newMember4}</td><td>${newMember5}</td></tr>`
-      );
+  //ブラウザに表示させる
+  let td = document.getElementById("list");
+  td.insertAdjacentHTML(
+    "beforeend",
+    `<tr class="member"><td>${newMember1}</td><td>${newMember2}</td><td>${newMember3a},${newMember3b}</td><td>${newMember4}</td><td>${newMember5}</td></tr>`
+  );
 
   function random(arrayData, count) {
     // countが設定されていない場合は1にする
@@ -30,14 +30,13 @@ function buttonClick() {
     var arrayData = arrayData;
     //新しい配列を用意
     let randomMember = [];
-    //繰り返す
     for (var i = 0; i < count; i++) {
       var arrayIndex = Math.floor(Math.random() * arrayData.length);
       randomMember[i] = arrayData[arrayIndex];
       // 1回選択された値は削除して再度選ばれないようにする
       arrayData.splice(arrayIndex, 1);
     }
-    //配列に返す
+    //配列に戻す
     return randomMember;
   }
 }

@@ -23,4 +23,9 @@ button{
 
 body {
   display: flex;
+  display: flex;
+}
+
+tbody {
+  word-spacing: 20px;
 }

@@ -17,14 +17,12 @@ function buttonClick() {
   //差分からランダムで6人ずつ出し変数に格納
   let newMember4 = random(newMember7, 6);
   let newMember5 = random(newMember7, 6);
-
   //ブランチに表示させる
   let td = document.getElementById("list");
   td.insertAdjacentHTML(
     "beforeend",
     `<tr class="member"><td>${newMember1}</td><td>${newMember2}</td><td>${newMember3a},${newMember3b}</td><td>${newMember4}</td><td>${newMember5}</td></tr>`
   );
-
   function random(arrayData, count) {
     // countが設定されていない場合は1にする
     var count = count || 1;
@@ -40,4 +38,9 @@ function buttonClick() {
     //配列に戻す
     return randomMember;
   }
+}
+
+//４回繰り返し
+for (let i = 0; i * 4; i++){
+  console.log("i = " + i);
 }

@@ -5,7 +5,9 @@ function buttonClick() {
   //ランダムで取得した名前を変数に格納する
   let newMember1 = random(member1, 6);
   let newMember2 = random(member1, 6);
+  //member1から残りの3人を出す
   let newMember3A = random(member1, 3);
+  //member2から3人出す
   let newMember3B = random(member2, 3);
   let newMember4 = random(member2, 6);
   let newMember5 = random(member2, 6);

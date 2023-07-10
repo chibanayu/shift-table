@@ -39,6 +39,7 @@ function create() {
   }
 }
 
+//ボタンを1回押したら4週分表示される
 function buttonClick() {
   for (let i = 0; i < create(); i++) {
   }
